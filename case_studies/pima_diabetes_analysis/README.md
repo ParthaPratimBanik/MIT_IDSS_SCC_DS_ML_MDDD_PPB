@@ -2,30 +2,31 @@
 A case study of Foundations of Data Science course.
 
 
-## Description
+## <u>**Description:**</u>
 In this case study, the aim is to analyze diabetes data and address some important insights.
 This case study is mainly focused on Exploratory Data Analysis (EDA).
 
 
-### Problem Statement:
+## <u>**Problem Statement:**</u>
 Diabetes is one of the most frequent diseases worldwide and the number of diabetic patients are growing over the years. The main cause of diabetes remains unknown, yet scientists believe that both genetic factors and environmental lifestyle play a major role in diabetes.
 
-A few years ago research was done on a tribe in America which is called the Pima tribe (also known as the Pima Indians). In this tribe, it was found that the ladies are prone to diabetes very early. Several constraints were placed on the selection of these instances from a larger database. In particular, all patients were females at least 21 years old of Pima Indian heritage. Here, different aspects of Diabetes are analyzed by doing Exploratory Data Analysis.
+A few years ago research was done on a tribe in America which is called the Pima tribe (also known as the Pima Indians). In this tribe, it was found that the ladies are prone to diabetes very early. Several constraints were placed on the selection of these instances from a larger database. In particular, all patients were females at least 21 years old of Pima Indian heritage. Here, different aspects of Diabetes are analyzed by doing EDA.
 
-#### Data Dictionary:
+## <u>**Data Dictionary:**</u>
 Below is the attribute information:
 
-Pregnancies: Number of times pregnant
-Glucose: Plasma glucose concentration a 2 hours in an oral glucose tolerance test
-Blood pressure: Diastolic blood pressure (mm Hg)
-SkinThickness: Triceps skinfold thickness (mm)
-Insulin: 2-Hour serum insulin (mu U/ml) test
-BMI: Body mass index (weight in kg/(height in m)^2)
-DiabetesPedigreeFunction: A function that scores the likelihood of diabetes based on family history
-Age: Age in years
-Outcome: Class variable (0: the person is not diabetic or 1: the person is diabetic)
+**`Pregnancies`**: Number of times pregnant\
+**`Glucose`**: Plasma glucose concentration a 2 hours in an oral glucose tolerance test\
+**`Blood pressure`**: Diastolic blood pressure (mm Hg)\
+**`SkinThickness`**: Triceps skinfold thickness (mm)\
+**`Insulin`**: 2-Hour serum insulin (mu U/ml) test\
+**`BMI`**: Body mass index (weight in kg/(height in m)^2)\
+**`DiabetesPedigreeFunction`**: A function that scores the likelihood of diabetes based on family history\
+**`Age`**: Age in years\
+**`Outcome`**: Class variable (0: the person is not diabetic or 1: the person is diabetic)
 
-#### Questions
+
+## <u>**Questions:**</u>
 
 Q 1. Import the necessary libraries and briefly explain the use of each library\
 Q 2. Read the given dataset\
