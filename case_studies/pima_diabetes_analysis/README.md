@@ -27,23 +27,27 @@ Outcome: Class variable (0: the person is not diabetic or 1: the person is diabe
 
 #### Questions
 
-Q 1. Import the necessary libraries and briefly explain the use of each library
-Q 2. Read the given dataset
-Q3. Show the last 10 records of the dataset. How many columns are there?
-Q4. Show the first 10 records of the dataset
-Q5. What do you understand by the dimension of the dataset? Find the dimension of the `pima` dataframe.
-Q6. What do you understand by the size of the dataset? Find the size of the `pima` dataframe.
-Q7. What are the data types of all the variables in the data set?
-Q8. What do you mean by missing values? Are there any missing values in the `pima` dataframe?
-Q9. What does summary statistics of data represents? Find the summary statistics for all variables except 'Outcome' in the `pima` data? Take one column/variable from the output table and explain all the statistical measures.
-Q 10. Plot the distribution plot for the variable 'BloodPressure'. Write detailed observations from the plot.
-Q 11. What is the 'BMI' for the person having the highest 'Glucose'?
-Q 12. Q 12.1 What is the mean of the variable 'BMI'? 12.2 What is the median of the variable 'BMI'? 12.3 What is the mode of the variable 'BMI'? 12.4 Are the three measures of central tendency equal?
-Q 13. How many women's 'Glucose' level is above the mean level of 'Glucose'?
-Q 14. How many entries (women) have their 'BloodPressure' equal to the median of 'BloodPressure' and their 'BMI' less than the median of 'BMI'?
-Q 15. Below is the pairplot of variables 'Glucose', 'SkinThickness' and 'DiabetesPedigreeFunction'. Write you observations from the plot.
-Q 16. Plot the scatterplot between 'Glucose' and 'Insulin'. Write your observations from the plot.
-Q 17. Plot the boxplot for the 'Age' variable. Are there outliers?
-Q 18. Plot histograms for variable Age to understand the number of women in different Age groups given that they have diabetes or not. Explain both histograms and compare them.
-Q 19. What is Inter Quartile Range of all the variables? Why is it used? Which plot visualizes the same?
+Q 1. Import the necessary libraries and briefly explain the use of each library\
+Q 2. Read the given dataset\
+Q3. Show the last 10 records of the dataset. How many columns are there?\
+Q4. Show the first 10 records of the dataset\
+Q5. What do you understand by the dimension of the dataset? Find the dimension of the `pima` dataframe.\
+Q6. What do you understand by the size of the dataset? Find the size of the `pima` dataframe.\
+Q7. What are the data types of all the variables in the data set?\
+Q8. What do you mean by missing values? Are there any missing values in the `pima` dataframe?\
+Q9. What does summary statistics of data represents? Find the summary statistics for all variables except 'Outcome' in the `pima` data? Take one column/variable from the output table and explain all the statistical measures.\
+Q 10. Plot the distribution plot for the variable 'BloodPressure'. Write detailed observations from the plot.\
+Q 11. What is the 'BMI' for the person having the highest 'Glucose'?\
+Q 12. \
+Q 12.1 What is the mean of the variable 'BMI'?\
+Q 12.2 What is the median of the variable 'BMI'?\
+Q 12.3 What is the mode of the variable 'BMI'?\
+Q 12.4 Are the three measures of central tendency equal?\
+Q 13. How many women's 'Glucose' level is above the mean level of 'Glucose'?\
+Q 14. How many entries (women) have their 'BloodPressure' equal to the median of 'BloodPressure' and their 'BMI' less than the median of 'BMI'?\
+Q 15. Below is the pairplot of variables 'Glucose', 'SkinThickness' and 'DiabetesPedigreeFunction'. Write you observations from the plot.\
+Q 16. Plot the scatterplot between 'Glucose' and 'Insulin'. Write your observations from the plot.\
+Q 17. Plot the boxplot for the 'Age' variable. Are there outliers?\
+Q 18. Plot histograms for variable Age to understand the number of women in different Age groups given that they have diabetes or not. Explain both histograms and compare them.\
+Q 19. What is Inter Quartile Range of all the variables? Why is it used? Which plot visualizes the same?\
 Q 20. Find and visualize the the correlation matrix. Write your observations from the plot.
