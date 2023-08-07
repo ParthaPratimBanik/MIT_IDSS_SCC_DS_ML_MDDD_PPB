@@ -52,6 +52,9 @@ class DASH_APP:
         fig1.update_yaxes(title_text="")
         fig1.update_layout(height=self.height//2, width=self.width, title_text="")
 
+        fig2 = go.Figure()
+        fig2.add_trace(go.Pie(labels=[],values=[]))
+
         width_order1 = {"size":"True", "order": 1}
 
         def tab1LO():
@@ -150,7 +153,29 @@ class DASH_APP:
             app_header = html.H3("Pie Chart")
             app_rows.append(dbc.Row(dbc.Col(app_header, width={'size': "auto"},),))
 
-            layout = html.Div([app_rows[0]])
+            app_row2_cols=[]
+            app_graph = dcc.Graph(id='pie_plot', figure=fig2)
+            app_row2_cols.append(dbc.Col(app_graph, width={'size': 10, 'order': 1},))
+
+            app_vars_dd = dcc.Dropdown(id = 'variables_pc',
+                                    multi = False,
+                                    clearable = True,
+                                    disabled = False,
+                                    searchable = True,
+                                    style = {"display": True},
+                                    value = self.df.columns[0],
+                                    placeholder = "Files",
+                                    persistence = True,
+                                    persistence_type = "memory",
+                                    options = [{"label":col, "value":col}
+                                            for col in self.df.columns], className = "dcc_compon")
+            app_row2_cols.append(dbc.Col(app_vars_dd, width={'size': 2, 'order': 2}),)
+
+            layout = html.Div([app_rows[0],
+                               dbc.Row([
+                                   app_row2_cols[0],
+                                   app_row2_cols[1],
+                               ],),])
             return layout
         
         def tab4LO():
