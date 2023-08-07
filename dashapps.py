@@ -43,6 +43,15 @@ class DASH_APP:
         fig.update_yaxes(title_text="")
         fig.update_layout(height=self.height//2, width=self.width, title_text="")
 
+        fig1 = go.Figure()
+        fig1.add_trace(go.Scatter(x=[],y=[],
+                                  mode="markers",
+                                  showlegend=False,
+                                  visible=True,))
+        fig1.update_xaxes(title_text="")
+        fig1.update_yaxes(title_text="")
+        fig1.update_layout(height=self.height//2, width=self.width, title_text="")
+
         width_order1 = {"size":"True", "order": 1}
 
         def tab1LO():
@@ -84,10 +93,54 @@ class DASH_APP:
             app_rows = []
             html_div_text_style = {"display": True, "margin-top": "10px"}
 
-            app_header = html.H3("Line Plot")
+            app_header = html.H3("Scatter Plot")
             app_rows.append(dbc.Row(dbc.Col(app_header, width={'size': "auto"},),))
 
-            layout = html.Div([app_rows[0]])
+            app_row2_cols=[]
+            app_vars1_dd = dcc.Dropdown(id = 'variables1',
+                                    multi = False,
+                                    clearable = True,
+                                    disabled = False,
+                                    searchable = True,
+                                    style = {"display": True},
+                                    value = self.df.columns[0],
+                                    placeholder = "Files",
+                                    persistence = True,
+                                    persistence_type = "memory",
+                                    options = [{"label":col, "value":col}
+                                            for col in self.df.columns], className = "dcc_compon")
+            app_row2_cols.append(dbc.Col(app_vars1_dd, width={'size': 2, 'order': 1}),)
+            
+            app_graph = dcc.Graph(id='scatter_plot', figure=fig1)
+            app_row2_cols.append(dbc.Col(app_graph, width={'size': 8, 'order': 2},))
+            
+            app_row3_cols=[]
+            app_row3_cols.append(dbc.Col(html.Div(), width={'size': 2, 'order': 1},),)
+            app_vars2_dd = dcc.Dropdown(id = 'variables2',
+                        multi = False,
+                        clearable = True,
+                        disabled = False,
+                        searchable = True,
+                        style = {"display": True},
+                        value = self.df.columns[0],
+                        placeholder = "Files",
+                        persistence = True,
+                        persistence_type = "memory",
+                        options = [{"label":col, "value":col}
+                                for col in self.df.columns], className = "dcc_compon")
+            app_row3_cols.append(dbc.Col(app_vars2_dd, width={'size': 2, 'order': 2}),)
+
+            
+
+            layout = html.Div([app_rows[0],
+                               dbc.Row([
+                                   app_row2_cols[0],
+                                   app_row2_cols[1],
+                               ],),
+                               dbc.Row([
+                                   app_row3_cols[0],
+                                   app_row3_cols[1],
+                               ],),])
             return layout
         
         def tab3LO():
